@@ -11,5 +11,8 @@
     <color name="azul">#2f5df4</color>
     <color name="overlayBackground">#7f333639</color>
     <color name="overlayActionBar">#0e0d0e</color>
+    <color name="grisa">#C1CAC0</color>
+
+
 
 </resources>

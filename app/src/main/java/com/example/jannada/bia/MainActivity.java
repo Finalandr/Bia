@@ -47,14 +47,17 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-      /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        //Acá el botón de agregar recetas
+
+       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });*/
+        });
 
 
 
@@ -76,16 +79,16 @@ public class MainActivity extends AppCompatActivity
         ArrayList<Item> listItem= new ArrayList<>();
 
 
-        listItem.add(new Item("Ensaladas"));
+       /* listItem.add(new Item("Ensaladas"));
         listItem.add(new Item("Ensaladas"));
         listItem.add(new Item("Ensaladas"));
         listItem.add(new Item("Ensaladas"));
         listItem.add(new Item("Ensaladas"));
         listItem.add(new Item( "Ensaladas"));
         listItem.add(new Item("Ensaladas"));
-        listItem.add(new Item("Ensaladas"));
+        listItem.add(new Item("Ensaladas"));*/
 
-       /* listItem.add(new Item(R.drawable.ensalada6, "Ensaladas"));
+      /*listItem.add(new Item(R.drawable.ensalada6, "Ensaladas"));
         listItem.add(new Item(R.drawable.comidaligth2, "Ensaladas"));
         listItem.add(new Item(R.drawable.desayuno5, "Ensaladas"));
         listItem.add(new Item(R.drawable.almuerzo4, "Ensaladas"));
