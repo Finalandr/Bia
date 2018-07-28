@@ -5,8 +5,7 @@ public class Item {
     private int foto;
     private String titulo;
 
-    public Item(int foto, String titulo) {
-        this.foto = foto;
+    public Item( String titulo) {
         this.titulo = titulo;
 
     }

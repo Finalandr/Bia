@@ -25,12 +25,25 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        recyclerView= findViewById(R.id.recyclerView);
+
+        layoutManager= new GridLayoutManager(this,2);
+        recyclerView.setLayoutManager(layoutManager);
+
+        adapter= new SeccionAdapter(this,getListItem());
+
+        recyclerView.setAdapter(adapter);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -56,6 +69,33 @@ public class MainActivity extends AppCompatActivity
 
 
 
+
+    }
+
+    private ArrayList<Item> getListItem(){
+        ArrayList<Item> listItem= new ArrayList<>();
+
+
+        listItem.add(new Item("Ensaladas"));
+        listItem.add(new Item("Ensaladas"));
+        listItem.add(new Item("Ensaladas"));
+        listItem.add(new Item("Ensaladas"));
+        listItem.add(new Item("Ensaladas"));
+        listItem.add(new Item( "Ensaladas"));
+        listItem.add(new Item("Ensaladas"));
+        listItem.add(new Item("Ensaladas"));
+
+       /* listItem.add(new Item(R.drawable.ensalada6, "Ensaladas"));
+        listItem.add(new Item(R.drawable.comidaligth2, "Ensaladas"));
+        listItem.add(new Item(R.drawable.desayuno5, "Ensaladas"));
+        listItem.add(new Item(R.drawable.almuerzo4, "Ensaladas"));
+        listItem.add(new Item(R.drawable.cena, "Ensaladas"));
+        listItem.add(new Item(R.drawable.postre7, "Ensaladas"));
+        listItem.add(new Item(R.drawable.comidarapidaencasa5, "Ensaladas"));
+        listItem.add(new Item(R.drawable.bebida, "Ensaladas"));*/
+
+
+        return listItem;
 
     }
 

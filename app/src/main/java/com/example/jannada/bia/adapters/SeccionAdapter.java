@@ -19,6 +19,7 @@ public class SeccionAdapter extends RecyclerView.Adapter {
     private Context context;
     private ArrayList<Item> Itemlist;
 
+
     public SeccionAdapter(Context context, ArrayList<Item> itemlist) {
         this.context = context;
         this.Itemlist = itemlist;
