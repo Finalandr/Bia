@@ -79,14 +79,14 @@ public class MainActivity extends AppCompatActivity
         ArrayList<Item> listItem= new ArrayList<>();
 
 
-       /* listItem.add(new Item("Ensaladas"));
+        listItem.add(new Item("Ensaladas"));
         listItem.add(new Item("Ensaladas"));
         listItem.add(new Item("Ensaladas"));
         listItem.add(new Item("Ensaladas"));
         listItem.add(new Item("Ensaladas"));
         listItem.add(new Item( "Ensaladas"));
         listItem.add(new Item("Ensaladas"));
-        listItem.add(new Item("Ensaladas"));*/
+        listItem.add(new Item("Ensaladas"));
 
       /*listItem.add(new Item(R.drawable.ensalada6, "Ensaladas"));
         listItem.add(new Item(R.drawable.comidaligth2, "Ensaladas"));
