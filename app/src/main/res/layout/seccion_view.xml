@@ -14,7 +14,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:color/holo_red_dark" />
+        app:srcCompat="@drawable/desayuno" />
 
     <TextView
         android:id="@+id/textseccion"

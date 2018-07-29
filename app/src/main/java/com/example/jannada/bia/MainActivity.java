@@ -79,23 +79,23 @@ public class MainActivity extends AppCompatActivity
         ArrayList<Item> listItem= new ArrayList<>();
 
 
-        listItem.add(new Item("Ensaladas"));
+        /*listItem.add(new Item("Ensaladas"));
         listItem.add(new Item("Ensaladas"));
         listItem.add(new Item("Ensaladas"));
         listItem.add(new Item("Ensaladas"));
         listItem.add(new Item("Ensaladas"));
         listItem.add(new Item( "Ensaladas"));
         listItem.add(new Item("Ensaladas"));
-        listItem.add(new Item("Ensaladas"));
+        listItem.add(new Item("Ensaladas"));*/
 
-      /*listItem.add(new Item(R.drawable.ensalada6, "Ensaladas"));
-        listItem.add(new Item(R.drawable.comidaligth2, "Ensaladas"));
-        listItem.add(new Item(R.drawable.desayuno5, "Ensaladas"));
-        listItem.add(new Item(R.drawable.almuerzo4, "Ensaladas"));
-        listItem.add(new Item(R.drawable.cena, "Ensaladas"));
-        listItem.add(new Item(R.drawable.postre7, "Ensaladas"));
-        listItem.add(new Item(R.drawable.comidarapidaencasa5, "Ensaladas"));
-        listItem.add(new Item(R.drawable.bebida, "Ensaladas"));*/
+        listItem.add(new Item(R.drawable.ensalada6y, "Ensaladas"));
+        listItem.add(new Item(R.drawable.comidaligth2y, "Comida Ligth"));
+        listItem.add(new Item(R.drawable.desayunoy, "Desayuno"));
+        listItem.add(new Item(R.drawable.almuerzo4y, "Almuerzo"));
+        listItem.add(new Item(R.drawable.comidalight3y, "Cena"));
+        listItem.add(new Item(R.drawable.postre7y, "Postre"));
+        listItem.add(new Item(R.drawable.comidarapidaencasaf, "Comida Rapida"));
+        listItem.add(new Item(R.drawable.bebiday, "Bebidas"));
 
 
         return listItem;
