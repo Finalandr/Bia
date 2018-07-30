@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,10 +8,13 @@
 
 
     <RelativeLayout
-        android:layout_width="365dp"
+        android:layout_width="match_parent"
         android:layout_height="135dp"
         android:background="@color/azul"
         tools:ignore="MissingConstraints"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         tools:layout_editor_absoluteX="10dp"
         tools:layout_editor_absoluteY="10dp">
 
@@ -30,7 +33,7 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="match_parent"
+            android:layout_width="334dp"
             android:layout_height="123dp"
             android:layout_centerInParent="true"
             android:tint="@color/blanco"
@@ -38,4 +41,4 @@
 
     </RelativeLayout>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

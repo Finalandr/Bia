@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private void getListItem(){
+    private ArrayList<Item> getListItem(){
         listItem= new ArrayList<>();
 
         listItem.add(new Item(R.drawable.ensalada6y, "Ensaladas"));
@@ -84,13 +84,18 @@ public class MainActivity extends AppCompatActivity
         listItem.add(new Item(R.drawable.postre7y, "Postre"));
         listItem.add(new Item(R.drawable.comidarapidaencasaf, "Comida Rapida"));
         listItem.add(new Item(R.drawable.bebiday, "Bebidas"));
+        return listItem;
 
     }
 
     public void recyclerEvent(){
 
-        Intent receta= new Intent(MainActivity.this, Recetas.class);
-        startActivity(receta);
+        final Intent receta= new Intent(MainActivity.this, Recetas.class);
+
+
+        //Por esta parte se abre en otro
+
+        //startActivity(receta);
 
         listItem = new ArrayList<>();
 
@@ -98,12 +103,21 @@ public class MainActivity extends AppCompatActivity
 
         SeccionAdapter adapter= new SeccionAdapter(listItem);
 
+        //Lo tenías aquí
+
         adapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+
+
                 Toast.makeText(getApplicationContext(),"Seleccion: "+listItem.get(recyclerView.getChildAdapterPosition(v))
                         .getTitulo(),Toast.LENGTH_SHORT).show();
+
+               //Lo puse aqui
+
+                startActivity(receta);
+
             }
         });
 
