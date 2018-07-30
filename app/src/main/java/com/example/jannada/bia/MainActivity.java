@@ -1,10 +1,9 @@
 package com.example.jannada.bia;
 
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -25,8 +24,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private ArrayList<Item> listItem;
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
 
     @Override
@@ -34,15 +33,14 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //aqui se le agrega contenido dinamicamente al recycler view
         recyclerView= findViewById(R.id.recyclerView);
 
         layoutManager= new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter= new SeccionAdapter(this,getListItem());
+        recyclerEvent();
 
-        recyclerView.setAdapter(adapter);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -75,18 +73,8 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private ArrayList<Item> getListItem(){
-        ArrayList<Item> listItem= new ArrayList<>();
-
-
-        /*listItem.add(new Item("Ensaladas"));
-        listItem.add(new Item("Ensaladas"));
-        listItem.add(new Item("Ensaladas"));
-        listItem.add(new Item("Ensaladas"));
-        listItem.add(new Item("Ensaladas"));
-        listItem.add(new Item( "Ensaladas"));
-        listItem.add(new Item("Ensaladas"));
-        listItem.add(new Item("Ensaladas"));*/
+    private void getListItem(){
+        listItem= new ArrayList<>();
 
         listItem.add(new Item(R.drawable.ensalada6y, "Ensaladas"));
         listItem.add(new Item(R.drawable.comidaligth2y, "Comida Ligth"));
@@ -97,8 +85,29 @@ public class MainActivity extends AppCompatActivity
         listItem.add(new Item(R.drawable.comidarapidaencasaf, "Comida Rapida"));
         listItem.add(new Item(R.drawable.bebiday, "Bebidas"));
 
+    }
 
-        return listItem;
+    public void recyclerEvent(){
+
+        Intent receta= new Intent(MainActivity.this, Recetas.class);
+        startActivity(receta);
+
+        listItem = new ArrayList<>();
+
+        getListItem();
+
+        SeccionAdapter adapter= new SeccionAdapter(listItem);
+
+        adapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(getApplicationContext(),"Seleccion: "+listItem.get(recyclerView.getChildAdapterPosition(v))
+                        .getTitulo(),Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        recyclerView.setAdapter(adapter);
 
     }
 

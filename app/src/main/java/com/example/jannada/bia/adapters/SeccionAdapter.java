@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.jannada.bia.Item;
@@ -14,26 +15,28 @@ import com.example.jannada.bia.R;
 
 import java.util.ArrayList;
 
-public class SeccionAdapter extends RecyclerView.Adapter {
+public class SeccionAdapter extends RecyclerView.Adapter<SeccionAdapter.Holder> implements View.OnClickListener {
 
-    private Context context;
     private ArrayList<Item> Itemlist;
+    private ImageView button;
+    private View.OnClickListener listener;
 
 
-    public SeccionAdapter(Context context, ArrayList<Item> itemlist) {
-        this.context = context;
+    public SeccionAdapter(ArrayList<Item> itemlist) {
         this.Itemlist = itemlist;
     }
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View contentView = LayoutInflater.from(context).inflate(R.layout.seccion_view,null);
+    public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View contentView = LayoutInflater.from(parent.getContext()).inflate(R.layout.seccion_view,null);
+
+        contentView.setOnClickListener(this);
         return new Holder(contentView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull Holder holder, int position) {
 
         Item item= Itemlist.get(position);
         Holder holderr= (Holder) holder;
@@ -47,15 +50,30 @@ public class SeccionAdapter extends RecyclerView.Adapter {
         return Itemlist.size();
     }
 
+    public void setOnClickListener(View.OnClickListener listener){
+
+        this.listener= listener;
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        if(listener!=null){
+            listener.onClick(v);
+        }
+
+    }
+
     public class Holder extends RecyclerView.ViewHolder {
 
-        ImageButton im;
+        ImageView im;
         TextView tv;
 
         public Holder(View itemView) {
             super(itemView);
 
-            im= (ImageButton) itemView.findViewById(R.id.imageButtonseccion);
+            im= (ImageView) itemView.findViewById(R.id.imageseccion);
             tv= (TextView) itemView.findViewById(R.id.textseccion);
         }
     }

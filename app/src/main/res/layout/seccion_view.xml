@@ -3,28 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
 
-    <ImageButton
-        android:id="@+id/imageButtonseccion"
-        android:layout_width="138dp"
-        android:layout_height="107dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
+    <ImageView
+        android:id="@+id/imageseccion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textseccion"
+        app:layout_constraintEnd_toEndOf="@+id/textseccion"
+        app:layout_constraintStart_toStartOf="@+id/textseccion"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/desayuno" />
+        app:srcCompat="@color/azul" />
 
     <TextView
         android:id="@+id/textseccion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginStart="14dp"
+        android:layout_width="163dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="127dp"
+        android:background="@color/green"
         android:text="TextView"
+        android:paddingLeft="15dp"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButtonseccion"
-        app:layout_constraintStart_toStartOf="@+id/imageButtonseccion" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
