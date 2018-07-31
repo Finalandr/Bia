@@ -64,8 +64,9 @@ public class DetalleFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view=inflater.inflate(R.layout.recetas, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detalle, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

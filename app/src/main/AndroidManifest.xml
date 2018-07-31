@@ -27,6 +27,7 @@
         <activity android:name=".Recetas.BebidasActivity" />
         <activity android:name=".Recetas.PostreActivity" />
         <activity android:name=".Recetas.RapidaActivity"></activity>
+        <activity android:name=".Recetas.Detalle"></activity>
     </application>
 
 </manifest>
