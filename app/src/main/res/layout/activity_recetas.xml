@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Recetas">
 
-    <!--Aquí se llaman las recetas-->
+    <!--Aquí se llaman las recetas que van a ser el xml item_platillo-->
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"

@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--Se va a llamar en el 2do listview de recetas para mostrar los pasos a seguir-->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="145dp"

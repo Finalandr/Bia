@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:scrollbars="vertical">
 
-<!--Layout de las recetas-->
+<!--Layout de las recetas
+    Va a ser llamado dentro del ativity recetas
+-->
     
     <LinearLayout
         android:layout_width="match_parent"
