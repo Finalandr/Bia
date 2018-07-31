@@ -19,7 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Recetas"></activity>
+        <activity android:name=".Recetas.DesayunoActivity" />
+        <activity android:name=".Recetas.CenaActivity" />
+        <activity android:name=".Recetas.AlmuerzoActivity" />
+        <activity android:name=".Recetas.LigthActivity" />
+        <activity android:name=".Recetas.EnsaladaActivity" />
+        <activity android:name=".Recetas.BebidasActivity" />
+        <activity android:name=".Recetas.PostreActivity" />
+        <activity android:name=".Recetas.RapidaActivity"></activity>
     </application>
 
 </manifest>

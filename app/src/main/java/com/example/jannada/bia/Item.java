@@ -11,6 +11,10 @@ public class Item {
 
     }
 
+    public Item (String titulo){
+        this.titulo=titulo;
+    }
+
     public int getFoto() {
         return foto;
     }

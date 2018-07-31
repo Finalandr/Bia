@@ -1,5 +1,6 @@
 package com.example.jannada.bia;
 
+import android.app.ActivityManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,8 +16,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jannada.bia.Recetas.AlmuerzoActivity;
+import com.example.jannada.bia.Recetas.BebidasActivity;
+import com.example.jannada.bia.Recetas.CenaActivity;
+import com.example.jannada.bia.Recetas.DesayunoActivity;
+import com.example.jannada.bia.Recetas.EnsaladaActivity;
+import com.example.jannada.bia.Recetas.LigthActivity;
+import com.example.jannada.bia.Recetas.PostreActivity;
+import com.example.jannada.bia.Recetas.RapidaActivity;
 import com.example.jannada.bia.adapters.SeccionAdapter;
 
 import java.util.ArrayList;
@@ -92,7 +102,14 @@ public class MainActivity extends AppCompatActivity
 
     public void recyclerEvent(){
 
-        final Intent receta= new Intent(MainActivity.this, Recetas.class);
+        final Intent desayuno= new Intent(MainActivity.this, DesayunoActivity.class);
+        final Intent cena= new Intent(MainActivity.this, CenaActivity.class);
+        final Intent almuerzo= new Intent(MainActivity.this, AlmuerzoActivity.class);
+        final Intent ligth= new Intent(MainActivity.this, LigthActivity.class);
+        final Intent ensalada= new Intent(MainActivity.this, EnsaladaActivity.class);
+        final Intent postre= new Intent(MainActivity.this, PostreActivity.class);
+        final Intent bebida= new Intent(MainActivity.this, BebidasActivity.class);
+        final Intent rapida= new Intent(MainActivity.this, RapidaActivity.class);
 
 
         //Por esta parte se abre en otro
@@ -118,7 +135,23 @@ public class MainActivity extends AppCompatActivity
 
                //Lo puse aqui
 
-                startActivity(receta);
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Cena"){
+                    startActivity(cena);
+                }if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Desayuno"){
+                    startActivity(desayuno);
+                }if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Almuerzo"){
+                    startActivity(almuerzo);
+                }if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Comida Ligth"){
+                    startActivity(ligth);
+                }if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Ensalada"){
+                    startActivity(ensalada);
+                }if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Postre"){
+                    startActivity(postre);
+                }if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Bebidas"){
+                    startActivity(bebida);
+                }if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Comida Rapida"){
+                    startActivity(rapida);
+                }
 
             }
         });
@@ -126,6 +159,7 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setAdapter(adapter);
 
     }
+
 
     @Override
     public void onBackPressed() {
