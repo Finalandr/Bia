@@ -4,20 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.view.View;
 import android.widget.Toast;
-
 import com.example.jannada.bia.Comunicador;
-import com.example.jannada.bia.Fragments.DetalleFragment;
 import com.example.jannada.bia.Item;
-import com.example.jannada.bia.MainActivity;
 import com.example.jannada.bia.R;
 import com.example.jannada.bia.adapters.RecetaAdapter;
-import com.example.jannada.bia.adapters.SeccionAdapter;
 
 import java.util.ArrayList;
 
@@ -92,7 +86,7 @@ public class DesayunoActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(getApplicationContext(),"Seleccion: "+listItem.get(recyclerView.getChildAdapterPosition(v))
+                Toast.makeText(getApplicationContext(),listItem.get(recyclerView.getChildAdapterPosition(v))
                         .getTitulo(),Toast.LENGTH_SHORT).show();
 
                 if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="1"){

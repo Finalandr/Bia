@@ -28,6 +28,7 @@
         <activity android:name=".Recetas.PostreActivity" />
         <activity android:name=".Recetas.RapidaActivity"></activity>
         <activity android:name=".Recetas.Detalle"></activity>
+        <activity android:name=".AgregReceta"></activity>
     </application>
 
 </manifest>

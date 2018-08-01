@@ -18,7 +18,7 @@
         android:layout_width="70dp"
         android:layout_height="73dp"
         android:contentDescription="@string/nav_header_desc"
-        app:srcCompat="@drawable/renedores" />
+        app:srcCompat="@drawable/iconoapprecetas1" />
 
     <TextView
         android:layout_width="match_parent"

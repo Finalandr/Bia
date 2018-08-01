@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         //aqui se le agrega contenido dinamicamente al recycler view
+
+        final Intent miIntent = new Intent(MainActivity.this,AgregReceta.class);
+
         recyclerView= findViewById(R.id.recyclerView);
 
         layoutManager= new GridLayoutManager(this,2);
@@ -63,16 +66,9 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
 
+                    Toast.makeText(getApplicationContext(),"Nueva Receta",Toast.LENGTH_LONG).show();
+                startActivity(miIntent);
 
-                try {
-                    Snackbar.make(view, "Hola intentando redirigirte", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-
-                    Intent miIntent = new Intent(MainActivity.this,AgregReceta.class);
-                    startActivity(miIntent);
-                }catch (Exception e){
-                    Toast.makeText(getApplicationContext(),"No funciona",Toast.LENGTH_LONG).show();
-                }
 
 
             }
@@ -146,7 +142,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-                Toast.makeText(getApplicationContext(),"Seleccion: "+listItem.get(recyclerView.getChildAdapterPosition(v))
+                Toast.makeText(getApplicationContext(),listItem.get(recyclerView.getChildAdapterPosition(v))
                         .getTitulo(),Toast.LENGTH_SHORT).show();
 
                //Lo puse aqui

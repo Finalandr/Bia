@@ -107,7 +107,7 @@ public class EnsaladaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(getApplicationContext(),"Seleccion: "+listItem.get(recyclerView.getChildAdapterPosition(v))
+                Toast.makeText(getApplicationContext(),listItem.get(recyclerView.getChildAdapterPosition(v))
                         .getTitulo(),Toast.LENGTH_SHORT).show();
 
                 if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="1"){
