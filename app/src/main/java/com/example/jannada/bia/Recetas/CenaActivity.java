@@ -1,5 +1,6 @@
 package com.example.jannada.bia.Recetas;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -45,23 +46,27 @@ public class CenaActivity extends AppCompatActivity {
         listItem.add(new Item(R.drawable.comidarapidaencasaf, "Comida Rapida"));
         listItem.add(new Item(R.drawable.bebiday, "Bebidas"));*/
 
-        listItem.add(new Item("Ensaladas"));
-        listItem.add(new Item("Comida Ligth"));
-        listItem.add(new Item("Desayuno"));
-        listItem.add(new Item("Almuerzo"));
-        listItem.add(new Item("Cena"));
-        listItem.add(new Item("Postre"));
-        listItem.add(new Item("Comida Rapida"));
-        listItem.add(new Item("Bebidas"));
+        listItem.add(new Item("1"));
+        listItem.add(new Item("2"));
+        listItem.add(new Item("3"));
+        listItem.add(new Item("4"));
+        listItem.add(new Item("5"));
+        listItem.add(new Item("6"));
+        listItem.add(new Item("7"));
+        listItem.add(new Item("8"));
         return listItem;
+
 
     }
 
     public void recyclerEvent(){
 
+        final Intent detalle= new Intent(CenaActivity.this,Detalle.class);
+
+
         //Por esta parte se abre en otro
 
-        //startActivity(receta);
+
 
         listItem = new ArrayList<>();
 
@@ -75,10 +80,59 @@ public class CenaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
                 Toast.makeText(getApplicationContext(),"Seleccion: "+listItem.get(recyclerView.getChildAdapterPosition(v))
                         .getTitulo(),Toast.LENGTH_SHORT).show();
+
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="1"){
+                    detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
+                    detalle.putExtra("dat2",getString(R.string.detalle));
+                    detalle.putExtra("dat3",getString(R.string.pasos));
+                    startActivity(detalle);
+                }
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="2"){
+                    detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
+                    detalle.putExtra("dat2",getString(R.string.detalle));
+                    detalle.putExtra("dat3",getString(R.string.pasos));
+                    startActivity(detalle);
+                }
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="3"){
+                    detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
+                    detalle.putExtra("dat2",getString(R.string.detalle));
+                    detalle.putExtra("dat3",getString(R.string.pasos));
+                    startActivity(detalle);
+                }
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="4"){
+                    detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
+                    detalle.putExtra("dat2",getString(R.string.detalle));
+                    detalle.putExtra("dat3",getString(R.string.pasos));
+                    startActivity(detalle);
+                }
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="5"){
+                    detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
+                    detalle.putExtra("dat2",getString(R.string.detalle));
+                    detalle.putExtra("dat3",getString(R.string.pasos));
+                    startActivity(detalle);
+                }
+               /* if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Bebidas"){
+                    detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
+                    detalle.putExtra("dat2",getString(R.string.detalle));
+                    detalle.putExtra("dat3",getString(R.string.pasos));
+                    startActivity(detalle);
+                }
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Postre"){
+                    detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
+                    detalle.putExtra("dat2",getString(R.string.detalle));
+                    detalle.putExtra("dat3",getString(R.string.pasos));
+                    startActivity(detalle);
+                }
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Comida Rapida"){
+                    detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
+                    detalle.putExtra("dat2",getString(R.string.detalle));
+                    detalle.putExtra("dat3",getString(R.string.pasos));
+                    startActivity(detalle);
+                }*/
+
+                // comunicador.enviarInfo(listItem.get(recyclerView.getChildAdapterPosition(v)));
 
 
             }
@@ -87,4 +141,5 @@ public class CenaActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
     }
+
 }

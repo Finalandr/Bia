@@ -49,8 +49,8 @@ public class DesayunoActivity extends AppCompatActivity{
     private ArrayList<Item> getListItem(){
         listItem= new ArrayList<>();
 
-       /* listItem.add(new Item(R.drawable.ensalada6y, "Ensaladas"));
-        listItem.add(new Item(R.drawable.comidaligth2y, "Comida Ligth"));
+        /*listItem.add(new Item(R.drawable.frutas, "Ensaladas"));
+        /*listItem.add(new Item(R.drawable.comidaligth2y, "Comida Ligth"));
         listItem.add(new Item(R.drawable.desayunoy, "Desayuno"));
         listItem.add(new Item(R.drawable.almuerzo4y, "Almuerzo"));
         listItem.add(new Item(R.drawable.comidalight3y, "Cena"));
@@ -58,15 +58,16 @@ public class DesayunoActivity extends AppCompatActivity{
         listItem.add(new Item(R.drawable.comidarapidaencasaf, "Comida Rapida"));
         listItem.add(new Item(R.drawable.bebiday, "Bebidas"));*/
 
-        listItem.add(new Item("Ensaladas"));
-        listItem.add(new Item("Comida Ligth"));
-        listItem.add(new Item("Desayuno"));
-        listItem.add(new Item("Almuerzo"));
-        listItem.add(new Item("Cena"));
-        listItem.add(new Item("Postre"));
-        listItem.add(new Item("Comida Rapida"));
-        listItem.add(new Item("Bebidas"));
+        listItem.add(new Item("1"));
+        listItem.add(new Item("2"));
+        listItem.add(new Item("3"));
+        listItem.add(new Item("4"));
+        listItem.add(new Item("5"));
+        /*listItem.add(new Item("6"));
+        listItem.add(new Item("7"));
+        listItem.add(new Item("8"));*/
         return listItem;
+
 
     }
 
@@ -94,37 +95,37 @@ public class DesayunoActivity extends AppCompatActivity{
                 Toast.makeText(getApplicationContext(),"Seleccion: "+listItem.get(recyclerView.getChildAdapterPosition(v))
                         .getTitulo(),Toast.LENGTH_SHORT).show();
 
-                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Ensaladas"){
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="1"){
                     detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
                     detalle.putExtra("dat2",getString(R.string.detalle));
                     detalle.putExtra("dat3",getString(R.string.pasos));
                     startActivity(detalle);
                 }
-                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Comida Ligth"){
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="2"){
                     detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
                     detalle.putExtra("dat2",getString(R.string.detalle));
                     detalle.putExtra("dat3",getString(R.string.pasos));
                     startActivity(detalle);
                 }
-                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Cena"){
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="3"){
                     detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
                     detalle.putExtra("dat2",getString(R.string.detalle));
                     detalle.putExtra("dat3",getString(R.string.pasos));
                     startActivity(detalle);
                 }
-                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Almuerzo"){
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="4"){
                     detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
                     detalle.putExtra("dat2",getString(R.string.detalle));
                     detalle.putExtra("dat3",getString(R.string.pasos));
                     startActivity(detalle);
                 }
-                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Desayuno"){
+                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="5"){
                     detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
                     detalle.putExtra("dat2",getString(R.string.detalle));
                     detalle.putExtra("dat3",getString(R.string.pasos));
                     startActivity(detalle);
                 }
-                if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Bebidas"){
+               /* if(listItem.get(recyclerView.getChildAdapterPosition(v)).getTitulo()=="Bebidas"){
                     detalle.putExtra("dat1",R.drawable.mesadetrabajo1);
                     detalle.putExtra("dat2",getString(R.string.detalle));
                     detalle.putExtra("dat3",getString(R.string.pasos));
@@ -141,7 +142,7 @@ public class DesayunoActivity extends AppCompatActivity{
                     detalle.putExtra("dat2",getString(R.string.detalle));
                     detalle.putExtra("dat3",getString(R.string.pasos));
                     startActivity(detalle);
-                }
+                }*/
 
                // comunicador.enviarInfo(listItem.get(recyclerView.getChildAdapterPosition(v)));
 

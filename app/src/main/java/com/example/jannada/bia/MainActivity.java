@@ -64,8 +64,17 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
 
 
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                try {
+                    Snackbar.make(view, "Hola intentando redirigirte", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+
+                    Intent miIntent = new Intent(MainActivity.this,AgregReceta.class);
+                    startActivity(miIntent);
+                }catch (Exception e){
+                    Toast.makeText(getApplicationContext(),"No funciona",Toast.LENGTH_LONG).show();
+                }
+
+
             }
         });
 
@@ -80,7 +89,14 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        //Aquí la base de datos
+        //Aquí la base de datos
+        // Aquí la base de datos
+        //Aquí la base de datos
+        //Aquí la base de datos
+        //Aquí la base de datos
 
+        conexiondb conexiondb = new conexiondb(this, "db nrecetas", null,1);
 
 
     }
@@ -88,7 +104,7 @@ public class MainActivity extends AppCompatActivity
     private ArrayList<Item> getListItem(){
         listItem= new ArrayList<>();
 
-        listItem.add(new Item(R.drawable.ensalada6y, "Ensaladas"));
+        listItem.add(new Item(R.drawable.ensalada6y, "Ensalada"));
         listItem.add(new Item(R.drawable.comidaligth2y, "Comida Ligth"));
         listItem.add(new Item(R.drawable.desayunoy, "Desayuno"));
         listItem.add(new Item(R.drawable.almuerzo4y, "Almuerzo"));
