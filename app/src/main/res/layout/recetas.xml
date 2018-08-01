@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             android:text="Ingredientes"
             android:textSize="20dp"
-            android:textColor="@color/negro"/>
+            android:textColor="@color/negro"
+            android:paddingLeft="15dp"/>
 
 
 
@@ -40,20 +41,14 @@
                     android:layout_centerInParent="true"
                     app:srcCompat="@drawable/tenedores" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:padding="8dp"
-                    android:text="ingredientes"
-                    android:textColor="@color/negro" />
-
             </RelativeLayout>
 
             <TextView
-            android:id="@+id/ingredientes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+                android:id="@+id/ingredientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="8dp"/>
 
         </LinearLayout>
 
@@ -64,6 +59,7 @@
             android:layout_marginTop="16dp"
           android:text="Pasos"
             android:textSize="20dp"
+            android:paddingLeft="15dp"
             android:textColor="@color/negro"/>
 
         <TextView
@@ -71,7 +67,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:paddingLeft="15dp"/>
 
 
     </LinearLayout>
