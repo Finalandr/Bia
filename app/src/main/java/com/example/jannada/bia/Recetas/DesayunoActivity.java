@@ -8,7 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
-import com.example.jannada.bia.Comunicador;
+
 import com.example.jannada.bia.Item;
 import com.example.jannada.bia.R;
 import com.example.jannada.bia.adapters.RecetaAdapter;
@@ -21,7 +21,6 @@ public class DesayunoActivity extends AppCompatActivity{
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     Activity activity;
-    Comunicador comunicador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,7 +137,7 @@ public class DesayunoActivity extends AppCompatActivity{
                     startActivity(detalle);
                 }*/
 
-               // comunicador.enviarInfo(listItem.get(recyclerView.getChildAdapterPosition(v)));
+
 
 
             }
@@ -148,10 +147,4 @@ public class DesayunoActivity extends AppCompatActivity{
 
     }
 
-   /* @Override
-   /* public void enviarInfo(Item item) {
-        DetalleFragment detalle= new DetalleFragment();
-
-        Bundle envio= new Bundle()
-    }*/
 }
